@@ -13,4 +13,10 @@ public class MaintenanceMonitorController {
     public String getMessage() {
         return message;
     }
+
+    @RequestMapping(path = "api/message/set")
+    public String setMessage(@RequestParam String m) {
+        this.message = m;
+        return "ok";
+    }
 }
